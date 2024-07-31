@@ -1,0 +1,20 @@
+signal x1, x2, theta, v1, v2, omega,u1,u2
+
+# Atomic Predicates
+param p_stable=1, p_over = 12, start_stable=14, dur_stable=inf
+
+mu_stable := sqrt(x1[t].^2 + x2[t].^2 + theta[t].^2 + v1[t]^2 + v2[t].^2 + omega[t].^2) < p_stable
+mu_over := sqrt(x1[t].^2 + x2[t].^2 + theta[t].^2 + v1[t]^2 + v2[t].^2 + omega[t].^2) > p_over
+
+phi_pareto := alw (sqrt(x1[t].^2 + x2[t].^2 + theta[t].^2 + v1[t]^2 + v2[t].^2 + omega[t].^2) >0)
+
+#mu_stable := y[t] < p_stable
+#mu_over :=   y[t] > p_over
+
+# Formula for being stable. Parameter measures duration of stability.
+
+phi_stable := alw_[start_stable, start_stable+dur_stable]  mu_stable
+phi_over :=  alw not mu_over
+phi := phi_over and phi_stable
+
+

@@ -1,0 +1,8 @@
+signal inSafeRegion
+
+# predicate for being in the safe region
+vehicleIsSafe := inSafeRegion[t] > 0.5
+
+# Formula for safety. Parameter is for tf.
+param tf=15
+phi_safety := alw_[0, 15]  vehicleIsSafe

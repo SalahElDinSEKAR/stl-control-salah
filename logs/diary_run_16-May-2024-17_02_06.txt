@@ -1,0 +1,27 @@
+Will log results in data/Res_Watertank_16-May-2024-17_02_06.mat
+Saving matlab outputs in logs/diary_run_16-May-2024-17_02_06.txt
+
+-- Iter 1 ------------------------------------------------------
+Generate initial traces...
+Data does not exist yet, compute it now (0 or 1)?0
+Data does not exist yet, compute it now (0 or 1)?
+Loading mpc data from data/BPidWatertank_model_mpc_data_c0_qr10_seed100000_efd7e9.mat
+Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unable to find file or directory 'data/BPidWatertank_model_mpc_data_c0_qr10_seed100000_efd7e9.mat'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('imitation_pb/get_mpc_traces', '/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m', 601)" style="font-weight:bold">imitation_pb/get_mpc_traces</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m',601,0)">line 601</a>)
+                load(fname);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('imitation_pb/algo2', '/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m', 456)" style="font-weight:bold">imitation_pb/algo2</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m',456,0)">line 456</a>)
+                    Bval_traces = this.get_mpc_traces(valid_sampling);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_watertank', '/home/sekars/Documents/stage/stl-control-imitation/run_watertank.m', 16)" style="font-weight:bold">run_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/run_watertank.m',16,0)">line 16</a>)
+res= pb_watertank.algo2(...
+
+
+
+
+
+
+
+

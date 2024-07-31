@@ -1,0 +1,125 @@
+Will log results in data/Res_Watertank_31-Jul-2024-11_39_35.mat
+Saving matlab outputs in logs/diary_run_31-Jul-2024-11_39_35.txt
+
+-- Iter 1 ------------------------------------------------------
+Generate initial traces...
+Loading mpc data from data/BPidWatertank_model_mpc_data_c16_qr84_seed1_9e4f5e.mat
+Eval requirements on 1/92 traces.Eval requirements on 1/92 traces.Eval requirements on 2/92 traces.Eval requirements on 3/92 traces.Eval requirements on 4/92 traces.Eval requirements on 5/92 traces.Eval requirements on 6/92 traces.Eval requirements on 7/92 traces.Eval requirements on 8/92 traces.Eval requirements on 9/92 traces.Eval requirements on 10/92 traces.Eval requirements on 11/92 traces.Eval requirements on 12/92 traces.Eval requirements on 13/92 traces.Eval requirements on 14/92 traces.Eval requirements on 15/92 traces.Eval requirements on 16/92 traces.Eval requirements on 17/92 traces.Eval requirements on 18/92 traces.Eval requirements on 19/92 traces.Eval requirements on 20/92 traces.Eval requirements on 21/92 traces.Eval requirements on 22/92 traces.Eval requirements on 23/92 traces.Eval requirements on 24/92 traces.Eval requirements on 25/92 traces.Eval requirements on 26/92 traces.Eval requirements on 27/92 traces.Eval requirements on 28/92 traces.Eval requirements on 29/92 traces.Eval requirements on 30/92 traces.Eval requirements on 31/92 traces.Eval requirements on 32/92 traces.Eval requirements on 33/92 traces.Eval requirements on 34/92 traces.Eval requirements on 35/92 traces.Eval requirements on 36/92 traces.Eval requirements on 37/92 traces.Eval requirements on 38/92 traces.Eval requirements on 39/92 traces.Eval requirements on 40/92 traces.Eval requirements on 41/92 traces.Eval requirements on 42/92 traces.Eval requirements on 43/92 traces.Eval requirements on 44/92 traces.Eval requirements on 45/92 traces.Eval requirements on 46/92 traces.Eval requirements on 47/92 traces.Eval requirements on 48/92 traces.Eval requirements on 49/92 traces.Eval requirements on 50/92 traces.Eval requirements on 51/92 traces.Eval requirements on 52/92 traces.Eval requirements on 53/92 traces.Eval requirements on 54/92 traces.Eval requirements on 55/92 traces.Eval requirements on 56/92 traces.Eval requirements on 57/92 traces.Eval requirements on 58/92 traces.Eval requirements on 59/92 traces.Eval requirements on 60/92 traces.Eval requirements on 61/92 traces.Eval requirements on 62/92 traces.Eval requirements on 63/92 traces.Eval requirements on 64/92 traces.Eval requirements on 65/92 traces.Eval requirements on 66/92 traces.Eval requirements on 67/92 traces.Eval requirements on 68/92 traces.Eval requirements on 69/92 traces.Eval requirements on 70/92 traces.Eval requirements on 71/92 traces.Eval requirements on 72/92 traces.Eval requirements on 73/92 traces.Eval requirements on 74/92 traces.Eval requirements on 75/92 traces.Eval requirements on 76/92 traces.Eval requirements on 77/92 traces.Eval requirements on 78/92 traces.Eval requirements on 79/92 traces.Eval requirements on 80/92 traces.Eval requirements on 81/92 traces.Eval requirements on 82/92 traces.Eval requirements on 83/92 traces.Eval requirements on 84/92 traces.Eval requirements on 85/92 traces.Eval requirements on 86/92 traces.Eval requirements on 87/92 traces.Eval requirements on 88/92 traces.Eval requirements on 89/92 traces.Eval requirements on 90/92 traces.Eval requirements on 91/92 traces.Eval requirements on 92/92 traces.
+Loading mpc data from data/BPidWatertank_model_mpc_data_c0_qr10_seed100000_3190a4.mat
+Eval requirements on 1/10 traces.Eval requirements on 1/10 traces.Eval requirements on 2/10 traces.Eval requirements on 3/10 traces.Eval requirements on 4/10 traces.Eval requirements on 5/10 traces.Eval requirements on 6/10 traces.Eval requirements on 7/10 traces.Eval requirements on 8/10 traces.Eval requirements on 9/10 traces.Eval requirements on 10/10 traces.
+TRAINING...
+Loading mpc data from data/BPidWatertank_model_mpc_data_c0_qr10_seed2000_67f05a.mat
+Eval requirements on 1/10 traces.Eval requirements on 1/10 traces.Eval requirements on 2/10 traces.Eval requirements on 3/10 traces.Eval requirements on 4/10 traces.Eval requirements on 5/10 traces.Eval requirements on 6/10 traces.Eval requirements on 7/10 traces.Eval requirements on 8/10 traces.Eval requirements on 9/10 traces.Eval requirements on 10/10 traces.
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+-- Iter 2 ------------------------------------------------------
+Average rob: 
+Worst rob: 
+Num cex: 
+Num samples: 
+New training samples: 
+Looking for counter examples...
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+START OPTIMIZATION METAHEURISTICS
+
+TEST QUASI-RANDOM SAMPLES
+
+
+++++++++++++++++++++++++++++++++++++++++++++
+Running 10 quasi-random samples with seed 1
+#calls (max:  300)        time spent (max: Inf)     [current  obj]     (current best) 
+        10                        6.4               [+1.51851e-01]     (+1.18684e-01)
+Best value found during quasi-random phase: 0.118684 with
+        H_0 = 8.6
+        ref_0 = 11.2444
+        Vp_0 = 2.24
+
+
+RUN LOCAL OPTIMIZATION
+
+
+********************************************
+Starting Nelder Mead optimization from x0:
+        H_0 = 8.6
+        ref_0 = 11.2444
+        Vp_0 = 2.24
+
+#calls (max:  300)        time spent (max: Inf)     [current  obj]     (current best) 
+        20                       14.2               [+1.10252e-01]     (+1.10252e-01)
+        30                       20.5               [+1.03596e-01]     (+1.02456e-01)
+        40                       26.9               [+1.02271e-01]     (+1.02131e-01)
+        50                       33.3               [+1.02140e-01]     (+1.02120e-01)
+        60                       39.5               [+1.02119e-01]     (+1.02118e-01)
+        70                       45.7               [+1.02118e-01]     (+1.02118e-01)
+        80                       51.9               [+1.02118e-01]     (+1.02118e-01)
+        90                       58.1               [+1.02118e-01]     (+1.02117e-01)
+       100                       64.2               [+1.02118e-01]     (+1.02117e-01)
+       110                       70.3               [+1.02118e-01]     (+1.02117e-01)
+Best value found during local phase: 0.102117 with
+        H_0 = 8.5334
+        ref_0 = 11.6
+        Vp_0 = 1.15947
+
+
+TEST QUASI-RANDOM SAMPLES
+
+
+++++++++++++++++++++++++++++++++++++++++++++
+Running 10 quasi-random samples with seed 11
+#calls (max:  300)        time spent (max: Inf)     [current  obj]     (current best) 
+       120                       76.5               [+1.74491e-01]     (+1.02117e-01)
+Best value found during quasi-random phase: 0.113206 with
+        H_0 = 10.1
+        ref_0 = 11.363
+        Vp_0 = 0.32
+
+
+RUN LOCAL OPTIMIZATION
+
+
+********************************************
+Starting Nelder Mead optimization from x0:
+        H_0 = 10.1
+        ref_0 = 11.363
+        Vp_0 = 0.32
+
+#calls (max:  300)        time spent (max: Inf)     [current  obj]     (current best) 
+       130                       82.7               [+1.05931e-01]     (+1.02117e-01)
+       140                       88.9               [+1.02275e-01]     (+1.02117e-01)
+       150                       95.0               [+1.02181e-01]     (+1.02117e-01)
+       160                      101.2               [+1.02177e-01]     (+1.02117e-01)
+       170                      107.9               [+1.02176e-01]     (+1.02117e-01)
+       180                      114.2               [+1.02177e-01]     (+1.02117e-01)
+       190                      120.3               [+1.02177e-01]     (+1.02117e-01)
+       200                      126.6               [+1.02177e-01]     (+1.02117e-01)
+Best value found during local phase: 0.102176 with
+        H_0 = 10.0683
+        ref_0 = 11.6
+        Vp_0 = 0.245829
+
+
+TEST QUASI-RANDOM SAMPLES
+
+
+++++++++++++++++++++++++++++++++++++++++++++
+Running 10 quasi-random samples with seed 21
+#calls (max:  300)        time spent (max: Inf)     [current  obj]     (current best) 
+       210                      132.8               [+1.57879e-01]     (+1.02117e-01)
+Best value found during quasi-random phase: 0.10767 with
+        H_0 = 9.5
+        ref_0 = 11.4815
+        Vp_0 = -4.672
+
+
+RUN LOCAL OPTIMIZATION
+
+
+********************************************
+Starting Nelder Mead optimization from x0:
+        H_0 = 9.5
+        ref_0 = 11.4815
+        Vp_0 = -4.672
+
+#calls (max:  300)        time spent (max: Inf)     [current  obj]     (current best) 
+       220                      139.0               [+1.06613e-01]     (+1.02117e-01)

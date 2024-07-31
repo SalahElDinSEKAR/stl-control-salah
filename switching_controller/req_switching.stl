@@ -1,0 +1,10 @@
+
+# Check
+check1 :=   ref[t] - y[t] == err_1_[t]
+
+param err= 0.1, tau=1.5
+
+close_ref := abs(y[t] - ref[t]) < err
+ev_close_ref := ev_[0, tau] close_ref
+phi := alw ( not close_ref => ev_close_ref )
+

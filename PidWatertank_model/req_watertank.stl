@@ -1,0 +1,7 @@
+param dt=0.001, T_1=6, T_2=4, ov=0.02, d=0.01
+
+phi_stab := (alw_[0,10] (((abs(ref[t+dt]-ref[t])>d) or ([t]==0)) => (ev_[0,4] (alw_[0,1] ((abs(H[t]-ref[t])<0.2))))))
+
+phi_ov := ((ref[0]-H[0] >= 0) => (alw_[T_1,T_2] (H[t]-ref[t]<ref[t]*ov))) and ((ref[0]-H[0] < 0) => (alw_[T_1,T_2] (ref[t]-H[t]<ref[t]*ov))) and (alw_[0,10-dt] ((ref[t+dt]-ref[t] > d) => (alw_[T_1,T_2] (H[t]-ref[t]<ref[t]*ov)))) and (alw_[0,10-dt] ((ref[t]-ref[t+dt] > d) => (alw_[T_1,T_2] (ref[t]-H[t]<ref[t]*ov))))
+
+phi := true and phi_ov

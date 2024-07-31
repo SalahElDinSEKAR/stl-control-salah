@@ -1,0 +1,221 @@
+Will log results in data/Res_Watertank_16-May-2024-15_45_18.mat
+Saving matlab outputs in logs/diary_run_16-May-2024-15_45_18.txt
+
+-- Iter 1 ------------------------------------------------------
+Generate initial traces...
+Data does not exist yet, compute it now (0 or 1)?1
+Undefined function 'gcp' for input arguments of type 'char'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('BreachSystem/parSim', '/home/sekars/Documents/stage/breach/Core/BreachSystem.m', 167)" style="font-weight:bold">BreachSystem/parSim</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Core/BreachSystem.m',167,0)">line 167</a>)
+        if isempty(gcp('nocreate'))
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('imitation_pb/get_mpc_traces', '/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m', 594)" style="font-weight:bold">imitation_pb/get_mpc_traces</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m',594,0)">line 594</a>)
+                    Bmpc_data.parSim();
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('imitation_pb/algo2', '/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m', 455)" style="font-weight:bold">imitation_pb/algo2</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m',455,0)">line 455</a>)
+                    Btrain_traces = this.get_mpc_traces(init_sampling);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_watertank', '/home/sekars/Documents/stage/stl-control-imitation/run_watertank.m', 16)" style="font-weight:bold">run_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/run_watertank.m',16,0)">line 16</a>)
+res= pb_watertank.algo2(...
+
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+clear
+clear all
+init_watertank:
+ init_watertank:
+                ↑
+{Error: Invalid expression. Check for missing or extra characters.
+} 
+init_watertank;
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',1,1)">1   </a>init_paths('PidWatertank_model')
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_paths.m',9,1)">9   </a>    addpath('shared_code')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_paths.m',10,1)">10  </a>    InitBreach
+if system_dependent('IsDebugMode')==1, dbstep; end
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_paths.m',13,1)">13  </a>    addpath(model_name);
+if system_dependent('IsDebugMode')==1, dbstep; end
+End of function init_paths.
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+init_paths('PidWatertank_model')
+if system_dependent('IsDebugMode')==1, dbcont; end
+Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('PidWatertank_imitation_pb')" style="font-weight:bold">PidWatertank_imitation_pb</a>
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/PidWatertank_model/PidWatertank_imitation_pb.m',5,1)">File: PidWatertank_imitation_pb.m Line: 5 Column: 1</a>
+Invalid use of operator.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('init_watertank', '/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m', 2)" style="font-weight:bold">init_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',2,0)">line 2</a>)
+pb_watertank =  PidWatertank_imitation_pb();
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('test_watertank', '/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m', 1)" style="font-weight:bold">test_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m',1,0)">line 1</a>)
+init_watertank;
+
+Unrecognized function or variable 'Bpid'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('test_watertank', '/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m', 9)" style="font-weight:bold">test_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m',9,0)">line 9</a>)
+G = BreachSignalsPlot(Bpid,'H');
+
+Unrecognized function or variable 'Bpid'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('test_watertank', '/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m', 9)" style="font-weight:bold">test_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m',9,0)">line 9</a>)
+G = BreachSignalsPlot(Bpid,'H');
+
+clear
+Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('PidWatertank_imitation_pb')" style="font-weight:bold">PidWatertank_imitation_pb</a>
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/PidWatertank_model/PidWatertank_imitation_pb.m',5,1)">File: PidWatertank_imitation_pb.m Line: 5 Column: 1</a>
+Invalid use of operator.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('init_watertank', '/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m', 2)" style="font-weight:bold">init_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',2,0)">line 2</a>)
+pb_watertank =  PidWatertank_imitation_pb();
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('test_watertank', '/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m', 1)" style="font-weight:bold">test_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m',1,0)">line 1</a>)
+init_watertank;
+
+clear all
+init_watertank:
+ init_watertank:
+                ↑
+{Error: Invalid expression. Check for missing or extra characters.
+} 
+init_watertank;
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('PidWatertank_imitation_pb')" style="font-weight:bold">PidWatertank_imitation_pb</a>
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/PidWatertank_model/PidWatertank_imitation_pb.m',5,1)">File: PidWatertank_imitation_pb.m Line: 5 Column: 1</a>
+Invalid use of operator.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('init_watertank', '/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m', 2)" style="font-weight:bold">init_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',2,0)">line 2</a>)
+pb_watertank =  PidWatertank_imitation_pb();
+} 
+init_watertank;
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',1,1)">1   </a>init_paths('PidWatertank_model')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',2,1)">2   </a>pb_watertank =  PidWatertank_imitation_pb();
+if system_dependent('IsDebugMode')==1, dbstep in; end
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('PidWatertank_imitation_pb')" style="font-weight:bold">PidWatertank_imitation_pb</a>
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/PidWatertank_model/PidWatertank_imitation_pb.m',5,1)">File: PidWatertank_imitation_pb.m Line: 5 Column: 1</a>
+Invalid use of operator.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('init_watertank', '/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m', 2)" style="font-weight:bold">init_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',2,0)">line 2</a>)
+pb_watertank =  PidWatertank_imitation_pb();
+} 
+clear all
+opentoline('/home/sekars/Documents/stage/stl-control-imitation/PidWatertank_model/PidWatertank_imitation_pb.m',5,1)
+clear all
+init_watertank;
+{init_watertank is not found in the current folder or on the MATLAB path, but exists in:
+    /home/sekars/Documents/stage/stl-control-imitation
+
+<a href = "matlab:internal.matlab.desktop.commandwindow.executeCommandForUser('cd ''/home/sekars/Documents/stage/stl-control-imitation''')">Change the MATLAB current folder</a> or <a href = "matlab:internal.matlab.desktop.commandwindow.executeCommandForUser('addpath ''/home/sekars/Documents/stage/stl-control-imitation''')">add its folder to the MATLAB path</a>.
+} 
+clear all
+init_watertank;
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/init_watertank.m',1,1)">1   </a>init_paths('PidWatertank_model')
+if system_dependent('IsDebugMode')==1, dbcont; end
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+Unrecognized function or variable 'Bpid'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('test_watertank', '/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m', 9)" style="font-weight:bold">test_watertank</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_watertank.m',9,0)">line 9</a>)
+G = BreachSignalsPlot(Bpid,'H');
+
+clear all
+init_watertank;\
+ init_watertank;\
+                ↑
+{Invalid use of operator.
+} 
+init_watertank;
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+Bpid = pb_watertank.create_nominal();
+clear all
+init_watertank;
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+Bpid = pb_watertank.create_nominal();
+
+Bpid.QuasiRandomSample(100);
+Bpid.Sim();
+Computed 0/100 simulations of PidWatertank_model_nominal_controlComputed 1/100 simulations of PidWatertank_model_nominal_controlComputed 2/100 simulations of PidWatertank_model_nominal_controlComputed 3/100 simulations of PidWatertank_model_nominal_controlComputed 4/100 simulations of PidWatertank_model_nominal_controlComputed 5/100 simulations of PidWatertank_model_nominal_controlComputed 6/100 simulations of PidWatertank_model_nominal_controlComputed 7/100 simulations of PidWatertank_model_nominal_controlComputed 8/100 simulations of PidWatertank_model_nominal_controlComputed 9/100 simulations of PidWatertank_model_nominal_controlComputed 10/100 simulations of PidWatertank_model_nominal_controlComputed 11/100 simulations of PidWatertank_model_nominal_controlComputed 12/100 simulations of PidWatertank_model_nominal_controlComputed 13/100 simulations of PidWatertank_model_nominal_controlComputed 14/100 simulations of PidWatertank_model_nominal_controlComputed 15/100 simulations of PidWatertank_model_nominal_controlComputed 16/100 simulations of PidWatertank_model_nominal_controlComputed 17/100 simulations of PidWatertank_model_nominal_controlComputed 18/100 simulations of PidWatertank_model_nominal_controlComputed 19/100 simulations of PidWatertank_model_nominal_controlComputed 20/100 simulations of PidWatertank_model_nominal_controlComputed 21/100 simulations of PidWatertank_model_nominal_controlComputed 22/100 simulations of PidWatertank_model_nominal_controlComputed 23/100 simulations of PidWatertank_model_nominal_controlComputed 24/100 simulations of PidWatertank_model_nominal_controlComputed 25/100 simulations of PidWatertank_model_nominal_controlComputed 26/100 simulations of PidWatertank_model_nominal_controlComputed 27/100 simulations of PidWatertank_model_nominal_controlComputed 28/100 simulations of PidWatertank_model_nominal_controlComputed 29/100 simulations of PidWatertank_model_nominal_controlComputed 30/100 simulations of PidWatertank_model_nominal_controlComputed 31/100 simulations of PidWatertank_model_nominal_controlComputed 32/100 simulations of PidWatertank_model_nominal_controlComputed 33/100 simulations of PidWatertank_model_nominal_controlComputed 34/100 simulations of PidWatertank_model_nominal_controlComputed 35/100 simulations of PidWatertank_model_nominal_controlComputed 36/100 simulations of PidWatertank_model_nominal_controlComputed 37/100 simulations of PidWatertank_model_nominal_controlComputed 38/100 simulations of PidWatertank_model_nominal_controlComputed 39/100 simulations of PidWatertank_model_nominal_controlComputed 40/100 simulations of PidWatertank_model_nominal_controlComputed 41/100 simulations of PidWatertank_model_nominal_controlComputed 42/100 simulations of PidWatertank_model_nominal_controlComputed 43/100 simulations of PidWatertank_model_nominal_controlComputed 44/100 simulations of PidWatertank_model_nominal_controlComputed 45/100 simulations of PidWatertank_model_nominal_controlComputed 46/100 simulations of PidWatertank_model_nominal_controlComputed 47/100 simulations of PidWatertank_model_nominal_controlComputed 48/100 simulations of PidWatertank_model_nominal_controlComputed 49/100 simulations of PidWatertank_model_nominal_controlComputed 50/100 simulations of PidWatertank_model_nominal_controlComputed 51/100 simulations of PidWatertank_model_nominal_controlComputed 52/100 simulations of PidWatertank_model_nominal_controlComputed 53/100 simulations of PidWatertank_model_nominal_controlComputed 54/100 simulations of PidWatertank_model_nominal_controlComputed 55/100 simulations of PidWatertank_model_nominal_controlComputed 56/100 simulations of PidWatertank_model_nominal_controlComputed 57/100 simulations of PidWatertank_model_nominal_controlComputed 58/100 simulations of PidWatertank_model_nominal_controlComputed 59/100 simulations of PidWatertank_model_nominal_controlComputed 60/100 simulations of PidWatertank_model_nominal_controlComputed 61/100 simulations of PidWatertank_model_nominal_controlComputed 62/100 simulations of PidWatertank_model_nominal_controlComputed 63/100 simulations of PidWatertank_model_nominal_controlComputed 64/100 simulations of PidWatertank_model_nominal_controlComputed 65/100 simulations of PidWatertank_model_nominal_controlComputed 66/100 simulations of PidWatertank_model_nominal_controlComputed 67/100 simulations of PidWatertank_model_nominal_controlComputed 68/100 simulations of PidWatertank_model_nominal_controlComputed 69/100 simulations of PidWatertank_model_nominal_controlComputed 70/100 simulations of PidWatertank_model_nominal_controlComputed 71/100 simulations of PidWatertank_model_nominal_controlComputed 72/100 simulations of PidWatertank_model_nominal_controlComputed 73/100 simulations of PidWatertank_model_nominal_controlComputed 74/100 simulations of PidWatertank_model_nominal_controlComputed 75/100 simulations of PidWatertank_model_nominal_controlComputed 76/100 simulations of PidWatertank_model_nominal_controlComputed 77/100 simulations of PidWatertank_model_nominal_controlComputed 78/100 simulations of PidWatertank_model_nominal_controlComputed 79/100 simulations of PidWatertank_model_nominal_controlComputed 80/100 simulations of PidWatertank_model_nominal_controlComputed 81/100 simulations of PidWatertank_model_nominal_controlComputed 82/100 simulations of PidWatertank_model_nominal_controlComputed 83/100 simulations of PidWatertank_model_nominal_controlComputed 84/100 simulations of PidWatertank_model_nominal_controlComputed 85/100 simulations of PidWatertank_model_nominal_controlComputed 86/100 simulations of PidWatertank_model_nominal_controlComputed 87/100 simulations of PidWatertank_model_nominal_controlComputed 88/100 simulations of PidWatertank_model_nominal_controlComputed 89/100 simulations of PidWatertank_model_nominal_controlComputed 90/100 simulations of PidWatertank_model_nominal_controlComputed 91/100 simulations of PidWatertank_model_nominal_controlComputed 92/100 simulations of PidWatertank_model_nominal_controlComputed 93/100 simulations of PidWatertank_model_nominal_controlComputed 94/100 simulations of PidWatertank_model_nominal_controlComputed 95/100 simulations of PidWatertank_model_nominal_controlComputed 96/100 simulations of PidWatertank_model_nominal_controlComputed 97/100 simulations of PidWatertank_model_nominal_controlComputed 98/100 simulations of PidWatertank_model_nominal_controlComputed 99/100 simulations of PidWatertank_model_nominal_controlComputed 100/100 simulations of PidWatertank_model_nominal_control
+G = BreachSignalsPlot(Bpid,'H');
+G.AddSignals('ref',1);
+G.AddSignals('ref',2);
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.graphics.axis.Axes/get')" style="font-weight:bold">matlab.graphics.axis.Axes/get</a>
+Invalid or deleted object.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('BreachSignalsPlot/AddAxes', '/home/sekars/Documents/stage/breach/Plots/BreachSignalsPlot.m', 82)" style="font-weight:bold">BreachSignalsPlot/AddAxes</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Plots/BreachSignalsPlot.m',82,0)">line 82</a>)
+                Xlim = get(this.Axes(1).ax,'XLim');
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('BreachSignalsPlot/AddSignals', '/home/sekars/Documents/stage/breach/Plots/BreachSignalsPlot.m', 168)" style="font-weight:bold">BreachSignalsPlot/AddSignals</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Plots/BreachSignalsPlot.m',168,0)">line 168</a>)
+                    this.AddAxes();
+} 
+G = BreachSignalsPlot(Bpid,'H');
+G.AddSignals('ref',1);
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))

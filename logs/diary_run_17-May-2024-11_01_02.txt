@@ -1,0 +1,232 @@
+Will log results in data/Res_Vehicle_17-May-2024-11_01_02.mat
+Saving matlab outputs in logs/diary_run_17-May-2024-11_01_02.txt
+
+-- Iter 1 ------------------------------------------------------
+Generate initial traces...
+Data does not exist yet, compute it now (0 or 1)?1
+Computed 0/100 simulations of MpcVehicle_model_nominal_controlComputed 1/100 simulations of MpcVehicle_model_nominal_controlComputed 2/100 simulations of MpcVehicle_model_nominal_controlComputed 3/100 simulations of MpcVehicle_model_nominal_controlComputed 4/100 simulations of MpcVehicle_model_nominal_controlComputed 5/100 simulations of MpcVehicle_model_nominal_controlComputed 6/100 simulations of MpcVehicle_model_nominal_controlComputed 7/100 simulations of MpcVehicle_model_nominal_controlComputed 8/100 simulations of MpcVehicle_model_nominal_controlComputed 9/100 simulations of MpcVehicle_model_nominal_controlComputed 10/100 simulations of MpcVehicle_model_nominal_control{Operation terminated by user during backsolveSys
+
+
+In solveAugSystem
+
+In normalNewtonStep
+
+In normalStep
+
+In computeTrialStep
+
+In barrier
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fmincon', '/usr/local/MATLAB/R2024a/toolbox/shared/optimlib/fmincon.m', 663)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2024a/toolbox/shared/optimlib/fmincon.m',663,0)">line 663</a>)
+    [X,FVAL,EXITFLAG,OUTPUT,LAMBDA,GRAD,HESSIAN] = barrier(funObj,X,A,B,Aeq,Beq,l,u,options.HessFcn, ...
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('MPC', '/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/MPC.m', 48)" style="font-weight:bold">MPC</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/MPC.m',48,0)">line 48</a>)
+    [uVec,fVal] = fmincon(@(u) params.objectiveFunction(params, state0, expandPath, indexTargetWayPoint, u),uVec0,[],[], [], [], lb, ub,[], options);
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('mpc_vehicle_control', '/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/mpc_vehicle_control.m', 10)" style="font-weight:bold">mpc_vehicle_control</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/mpc_vehicle_control.m',10,0)">line 10</a>)
+    [u, cost] = MPC(params, x0, path, expandPath, indexTargetWayPoint);
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('MpcVehicle_imitation_pb>@(x,options)mpc_vehicle_control(params_mpc_vehicle,path,expandPath,x)', '/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/MpcVehicle_imitation_pb.m', 50)" style="font-weight:bold">MpcVehicle_imitation_pb>@(x,options)mpc_vehicle_control(params_mpc_vehicle,path,expandPath,x)</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/MpcVehicle_imitation_pb.m',50,0)">line 50</a>)
+            pb.mpc_controlfn = @(x, options) mpc_vehicle_control(params_mpc_vehicle,path,expandPath, x);
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sim_breach_vehicle', '/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/sim_breach_vehicle.m', 27)" style="font-weight:bold">sim_breach_vehicle</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/sim_breach_vehicle.m',27,0)">line 27</a>)
+    [u, cost] = controlfn(x0);
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('MpcVehicle_imitation_pb>@(Sys,time,p,controlfn)(sim_breach_vehicle(Sys,controlfn,params_mpc_vehicle,path,safeRegion,time,p))', '/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/MpcVehicle_imitation_pb.m', 57)" style="font-weight:bold">MpcVehicle_imitation_pb>@(Sys,time,p,controlfn)(sim_breach_vehicle(Sys,controlfn,params_mpc_vehicle,path,safeRegion,time,p))</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/MpcVehicle_model/MpcVehicle_imitation_pb.m',57,0)">line 57</a>)
+            pb.sim_fn = @(Sys,time,p,controlfn)(sim_breach_vehicle(Sys,controlfn,params_mpc_vehicle, path, safeRegion,time,p));
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('imitation_pb>@(Sys,time,p)(this.sim_fn(Sys,time,p,this.mpc_controlfn))', '/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m', 110)" style="font-weight:bold">imitation_pb>@(Sys,time,p)(this.sim_fn(Sys,time,p,this.mpc_controlfn))</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m',110,0)">line 110</a>)
+            sim_mpc =@(Sys,time, p) (this.sim_fn(Sys,time,p, this.mpc_controlfn));
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('ComputeTraj>task_sim', '/home/sekars/Documents/stage/breach/Core/ComputeTraj.m', 386)" style="font-weight:bold">ComputeTraj>task_sim</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Core/ComputeTraj.m',386,0)">line 386</a>)
+    [traj.time, traj.X, P0.pts(:,ii), traj.status] = Sys.sim(Sys, tspan, P0.pts(:,ii));
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('ComputeTraj', '/home/sekars/Documents/stage/breach/Core/ComputeTraj.m', 278)" style="font-weight:bold">ComputeTraj</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Core/ComputeTraj.m',278,0)">line 278</a>)
+                trajs{iref} = task_sim(Sys, P0, tspan, ii);
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('BreachSystem/Sim', '/home/sekars/Documents/stage/breach/Core/BreachSystem.m', 259)" style="font-weight:bold">BreachSystem/Sim</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Core/BreachSystem.m',259,0)">line 259</a>)
+            this.P = ComputeTraj(this.Sys, this.P, tspan);
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('imitation_pb/get_mpc_traces', '/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m', 596)" style="font-weight:bold">imitation_pb/get_mpc_traces</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m',596,0)">line 596</a>)
+                    Bmpc_data.Sim();
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('imitation_pb/algo2', '/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m', 455)" style="font-weight:bold">imitation_pb/algo2</a> (<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/shared_code/imitation_pb.m',455,0)">line 455</a>)
+                    Btrain_traces = this.get_mpc_traces(init_sampling);
+} 
+test_pid_watertank
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_pid_watertank.m',5,1)">5   </a>B0.Sim();
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+test_pid_watertank
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_pid_watertank.m',5,1)">5   </a>B0.Sim();
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Core/BreachSystem.m',250,1)">250 </a>            end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Plots/BreachSignalsPlot.m',49,1)">49  </a>            end                        
+if system_dependent('IsDebugMode')==1, dbstep out; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_pid_watertank.m',8,1)">8   </a>BreachSignalsPlot(B0, {'H', 'ref'});
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_pid_watertank
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_pid_watertank.m',5,1)">5   </a>B0.Sim();
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_pid_watertank
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Initializing Breach from folder /home/sekars/Documents/stage/breach...
+---
+Reading file req_watertank.stl for STL formulas
+---
+phi =  alw (ev_[0, 9] ( abs(H[t]-ref[t]) < .2))
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_pid_watertank.m',4,1)">4   </a>B0 = pb_watertank.create_nominal();
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/stl-control-imitation/test_pid_watertank.m',5,1)">5   </a>B0.Sim();
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/home/sekars/Documents/stage/breach/Core/BreachSystem.m',250,1)">250 </a>            end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+CLEAR ALL
+{Unrecognized function or variable 'CLEAR'.
+} 
+clear all

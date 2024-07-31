@@ -1,0 +1,7 @@
+signal inSafeRegion
+
+# predicate for being in the safe region
+DroneIsSafe := inSafeRegion[t] > 0.5
+
+# Formula for safety.
+phi_safety := alw_[0, 15]  DroneIsSafe

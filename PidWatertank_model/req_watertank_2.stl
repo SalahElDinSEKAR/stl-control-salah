@@ -1,0 +1,7 @@
+#signals
+#signal h, ref
+
+# parameter
+#param Oshoot_c=1.09
+
+phi := alw(H[t]< 1.01362*ref[t]) `
