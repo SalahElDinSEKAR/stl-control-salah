@@ -1,0 +1,13 @@
+% Define the paths to the ROS 2 setup and workspace setup files
+ros2SetupFile = '/opt/ros/humble/setup.bash';
+workspaceSetupFile = '~/Documents/stage/ros2-matlab/install/setup.bash';
+launchFile = 'src/testing/launch/automatisation.py'; % Your launch file within the workspace
+
+
+% Construct the command to source the setup files and launch the nodes
+command = sprintf('source %s && source %s && python3 %s', ros2SetupFile, workspaceSetupFile, launchFile);
+
+% Use the system command to execute the constructed command
+[status, cmdout] = system(command);
+
+a=1

@@ -1,0 +1,1 @@
+phi := alw (ev_[0, 0.01] ( abs(H[t]-ref[t]) < .2)) 
