@@ -1,0 +1,4 @@
+if system_dependent('IsDebugMode')==1, dbstep; end
+Will log results in data/Res_Watertank_19-Aug-2024-14_20_00.mat
+if system_dependent('IsDebugMode')==1, dbstep; end
+Saving matlab outputs in logs/diary_run_19-Aug-2024-14_20_00.txt

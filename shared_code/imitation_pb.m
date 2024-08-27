@@ -396,7 +396,7 @@ classdef imitation_pb
         function all_results = algo2(this, varargin)
             
             % initial pool of mpc traces
-            opts.init_sampling.num_corners =16 ;
+            opts.init_sampling.num_corners =26 ;
             opts.init_sampling.num_quasi_random = 84;
             opts.init_sampling.seed = 1;           
             
